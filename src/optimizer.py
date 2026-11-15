@@ -1,7 +1,8 @@
 """ISPD 2027 Contest: MCMM Post-CTS Buffering and Sizing.
 
-Heuristic Optimizer Module (v1)
-Performs contest-legal standard cell sizing transformations to close timing.
+Heuristic Optimizer Module (v1.1)
+Performs pure VT swapping (LVT <-> RVT <-> SLVT) which preserves exact cell width,
+ensuring zero placement overlap and passing strict OpenROAD detailed placement legality.
 """
 
 import argparse
@@ -38,47 +39,56 @@ def resolve_input_files(input_dir):
     return def_path, v_path
 
 
-def apply_sample_legal_resizing(input_def, input_v, output_def, output_v):
-    """Applies valid cell resizing using our CellLibrary to create a legal transformed design."""
+def get_same_dimension_vt_swap(lib, master_name):
+    """Find a legal VT variant with the exact same cell footprint/dimension (e.g. _R -> _L or _SL)."""
+    current_vt = lib.parse_vt(master_name)
+    current_drive = lib.parse_drive_strength(master_name)
+    group = lib.get_legal_replacements(master_name)
+
+    # Prefer SLVT for higher speed, or LVT
+    for var in group:
+        if lib.parse_drive_strength(var) == current_drive and var != master_name:
+            if current_vt in ("RVT", "LVT") and lib.parse_vt(var) in ("SLVT", "LVT"):
+                return var
+    return None
+
+
+def apply_legal_vt_swaps(input_def, input_v, output_def, output_v):
     lib = CellLibrary()
     swaps = {}
 
-    # Read Verilog and identify movable non-clock standard cells to size
     with open(input_v, "r", encoding="utf-8") as f:
         v_lines = f.readlines()
 
     modified_v_lines = []
-    # Match instance lines like: AND2x2_ASAP7_75t_R _1234_ ( ...
     inst_pattern = re.compile(r"^\s*([A-Za-z0-9_]+)\s+([A-Za-z0-9_\\\[\]]+)\s*\(")
 
     cells_modified = 0
-    max_to_modify = 50  # modify a legal subset for v1 test
+    max_to_modify = 50
 
     for line in v_lines:
         m = inst_pattern.match(line)
         if m and cells_modified < max_to_modify:
             master = m.group(1)
             inst_name = m.group(2)
-            # Check if this cell has legal upsize or equivalent replacements
-            upsizes = lib.get_upsize_candidates(master)
-            if upsizes and not master.startswith("DFF") and not master.startswith("ICG"):
-                new_master = upsizes[0]
-                swaps[inst_name] = (master, new_master)
-                line = line.replace(master, new_master, 1)
-                cells_modified += 1
+            # Exclude sequential and clock cells
+            if not master.startswith("DFF") and not master.startswith("ICG") and not master.startswith("SDF"):
+                new_master = get_same_dimension_vt_swap(lib, master)
+                if new_master:
+                    swaps[inst_name] = (master, new_master)
+                    line = line.replace(master, new_master, 1)
+                    cells_modified += 1
         modified_v_lines.append(line)
 
     with open(output_v, "w", encoding="utf-8") as f:
         f.writelines(modified_v_lines)
 
-    print(f"Applied legal sizing to {len(swaps)} instances in Verilog.")
+    print(f"Applied {len(swaps)} zero-overlap VT swaps in Verilog.")
 
-    # Apply corresponding master changes in DEF COMPONENTS section
     with open(input_def, "r", encoding="utf-8") as f:
         def_lines = f.readlines()
 
     modified_def_lines = []
-    # DEF component line format: - inst_name master_name + PLACED ( x y ) ...
     def_inst_pattern = re.compile(r"^\s*-\s+([A-Za-z0-9_\\\[\]]+)\s+([A-Za-z0-9_]+)")
 
     for line in def_lines:
@@ -94,20 +104,19 @@ def apply_sample_legal_resizing(input_def, input_v, output_def, output_v):
     with open(output_def, "w", encoding="utf-8") as f:
         f.writelines(modified_def_lines)
 
-    print(f"DEF updated with matching masters.")
+    print("DEF updated with matching zero-overlap VT masters.")
 
 
 def main():
     start_time = time.time()
     args = parse_args()
-
     print(f"Running ISPD 2027 Optimizer on {args.benchmark} ({args.top_module})")
     input_def, input_v = resolve_input_files(args.input_dir)
 
     os.makedirs(os.path.dirname(args.output_def), exist_ok=True)
     os.makedirs(os.path.dirname(args.output_verilog), exist_ok=True)
 
-    apply_sample_legal_resizing(input_def, input_v, args.output_def, args.output_verilog)
+    apply_legal_vt_swaps(input_def, input_v, args.output_def, args.output_verilog)
     print(f"Optimization finished in {time.time() - start_time:.2f} seconds.")
 
 
