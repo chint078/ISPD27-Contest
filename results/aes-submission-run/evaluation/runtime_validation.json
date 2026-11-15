@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "tool_s": 0.47069267199913156,
+  "flow_s": 110.50098642599914,
+  "limit_seconds": 25200,
+  "input_sha256": {
+    "INPUT_DEF": "abee7598b2d093949912e9a72e240bee493b5cfd94a8506ac3458d84b1b1c3a4",
+    "INPUT_VERILOG": "a89e4d7a17e30694240af8ac9e98a61fae2de512f6adb09262c7b72f5d8d72ac"
+  }
+}

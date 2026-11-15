@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "design_legality_passed": true,
+  "complete_contest_legality": true,
+  "runtime_measured": true,
+  "automated_checks_passed": true,
+  "design": "aes",
+  "configuration": "aes_p55_h55",
+  "files_sha256": {
+    "summary.csv": "e11470cd690958f22d2dc859be982d528e281d0131a4f3a37a1192e5ab9483ff",
+    "metrics.json": "e650ead6b7e650cc1fa5138903a313ecd747879bc55200612a24bd132141e4fe",
+    "evaluated.def": "848dc773baeebaf006434c510e4b4b3d008d14dcb4c94c9c83f874452a7765c0",
+    "evaluated.v": "715f530569c9fc7b0505dc9a2572bfbafb9113ec42156b6faa0f2661ed184efb",
+    "run_config.json": "cc5774e98f3105daacde137a04563082da382729be466fd3c8681e44954302c2",
+    "structural_validation.json": "5a34daf4d35f0094a2ef50a7fa4c6e4ee49fc11ab0fce6197915bad65378d329",
+    "final_structural_validation.json": "5a34daf4d35f0094a2ef50a7fa4c6e4ee49fc11ab0fce6197915bad65378d329",
+    "submission_validation.json": "89639983bcad82877a5992236ff3b0dce59ea7879d696c073f3b22bb80bb442b",
+    "evaluation_runtime.json": "6af2aa9ee63ace7fcb379a7b2ea7a3defb2e1b6c123cc9368ee526ab0cf7db18",
+    "spef_validation.json": "2f454d0f2a20910102766c4ca2874761b09a6793e76c77d06c936e6275a122eb",
+    "runtime_validation.json": "180d37f3583cda5608667e21fcf40fbd887ca5bfe6de99c33c88e5620da2acd1"
+  },
+  "checks": [
+    "fixed_floorplan_io_pdn_blockages_tracks",
+    "protected_macros_and_cells",
+    "allowed_masters_and_transforms",
+    "clock_tree_and_sink_integrity",
+    "placement_legality",
+    "def_verilog_consistency",
+    "formal_equivalence",
+    "post_routing_integrity",
+    "spef_integrity"
+  ],
+  "note": "Design legality is checked against the packaged contest policy. Tool provenance/originality and final ranking are organizer responsibilities."
+}

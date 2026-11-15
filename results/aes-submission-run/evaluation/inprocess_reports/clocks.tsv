@@ -1,0 +1,7 @@
+corner	mode	clock	period_ps	virtual	propagated
+TC	functional_TC	clk	308.000000	0	1
+TC	functional_TC	vclk_clk	308.000000	1	0
+BC	functional_BC	clk	248.000015	0	1
+BC	functional_BC	vclk_clk	248.000015	1	0
+WC	functional_WC	clk	429.000000	0	1
+WC	functional_WC	vclk_clk	429.000000	1	0

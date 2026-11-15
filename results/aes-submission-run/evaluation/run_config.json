@@ -1,0 +1,83 @@
+{
+  "BENCHMARK": "aes",
+  "DESIGN_NAME": "aes_cipher_top",
+  "INPUT_DEF": "/workspace/results/aes-submission-run/tool/aes.def",
+  "INPUT_VERILOG": "/workspace/results/aes-submission-run/tool/aes.v",
+  "SDC_FILE": "/workspace/benchmarks/aes/sdc/TC.sdc",
+  "PLATFORM_DIR": "/workspace/platform/asap7",
+  "BASELINE_DEF": "/workspace/benchmarks/aes/input.def",
+  "BASELINE_VERILOG": "/workspace/benchmarks/aes/input.v",
+  "MCMM_CONFIG": "/workspace/benchmarks/aes/mcmm.tcl",
+  "RUN_RESIZER": "0",
+  "CORNERS": "TC BC WC",
+  "SCENES": "TC BC WC",
+  "LIBRARY_CORNERS": "TC BC WC",
+  "NUM_CORES": "8",
+  "SIGNAL_LAYERS": "M2-M7",
+  "CLOCK_LAYERS": "M4-M7",
+  "ROUTE_ADJUSTMENT": "0.25",
+  "ROUTE_ITERATIONS": "30",
+  "ROUTE_SEED": "42",
+  "RSZ_MAX_ITERATIONS": "500",
+  "RSZ_TNS_PERCENT": "100",
+  "RSZ_SETUP_SEQUENCE": "vt_swap sizeup swap buffer",
+  "PHASE": "full",
+  "OPENROAD_EXE": "/install/OpenROAD/bin/openroad",
+  "KEPLER_FORMAL_EXE": "/usr/local/bin/kepler-formal",
+  "VERIFY_FORMAL": "1",
+  "SCENARIO_DIR": "/workspace/benchmarks/aes/sdc",
+  "REPAIR_KIND": "off",
+  "TECH_LEF": "/workspace/platform/asap7/lef/asap7_tech_1x_201209.lef",
+  "ADDITIONAL_LEFS": "",
+  "ADDITIONAL_LIBS": "",
+  "RSZ_MAX_BUFFER_PERCENT": "",
+  "sha256": {
+    "INPUT_DEF": "abee7598b2d093949912e9a72e240bee493b5cfd94a8506ac3458d84b1b1c3a4",
+    "INPUT_VERILOG": "a89e4d7a17e30694240af8ac9e98a61fae2de512f6adb09262c7b72f5d8d72ac",
+    "SDC_FILE": "3e3db4a42b7450a2bff34c387deb190e6adaa09fc7da0bca11e5ed1ab1d7cd33",
+    "BASELINE_DEF": "2819ac0e8ddf627c341829d631c57ec5e4048753596200d1e6e2fe965fa5373f",
+    "BASELINE_VERILOG": "194ca7866246b4ce7d1a316c8dd049cdcb7e12c6396f437ea30f1c9a5384ee80",
+    "MCMM_CONFIG": "cd95cf7c65f37e2d3f212a3da01a170b7bd679ea19d9336f3a57d755aa2f7203"
+  },
+  "library_sha256": {
+    "/workspace/platform/asap7/lef/asap7_tech_1x_201209.lef": "d63614347181827d48aafb4d9d4cf9f112ecbda98bef544ac005eff81b06fb92"
+  },
+  "scenario": {
+    "id": "aes_p55_h55",
+    "design": "aes",
+    "utilization_percent": 50,
+    "generation_period_ps": 620,
+    "period_set": "p55",
+    "periods_ps": {
+      "BC": 248,
+      "TC": 308,
+      "WC": 429
+    },
+    "setup_uncertainty_ps": 0,
+    "hold_uncertainty_ps": 55
+  },
+  "scenario_sdc_sha256": {
+    "TC": "3e3db4a42b7450a2bff34c387deb190e6adaa09fc7da0bca11e5ed1ab1d7cd33",
+    "BC": "7c500ac886b06679dd15f703992bf8675fb4c7ca92b9af323754cf223d2950ec",
+    "WC": "952cc10ab2f4d79517d67710ec25f11ec5c4b153afb188003f1dbff5f4068060"
+  },
+  "platform_manifest_sha256": "85cf5ca0a9e2b9c4e4815632e6a92e9ae2b9003c53e4a7b9183334a82db5d102",
+  "openroad_sha256": "d964e1d0d62982e9571e2a0534772c26457d9ff7499b4583d4a7e75666470893",
+  "script_sha256": {
+    "internal/audit.py": "aa7b80f2454312713df7cc854d8d6d4eded92944e548f7cf5a816968f9ffbabb",
+    "internal/benchmark.py": "ad2450eae7e01d98506ffb96a2cecc2229d9ccad32fd5698c6fdb214a6402838",
+    "internal/check_spef.py": "551e8eec3a204d5bf565a6a45a46eee3d8c993bca1bbb2b2977f76ba5a740eff",
+    "internal/core_run.sh": "d5c1889a67bd136d848dd1a008ebc3f4d6f450f829b7cfab149c5343a5c4d9d2",
+    "internal/evaluation.tcl": "8d7fb0030d07e11baf250ca6d1b93f8fed051fa5052963b76ffad32eb7fa0217",
+    "internal/inspect_geometry.tcl": "231ed0ea3f782d9bfd839360ea8e0f864036497995079e6063f3aeb8fe5ebd91",
+    "internal/legality.py": "0d26e5b21ebc63716ea9e3e8f76bdeab4feca7d80d62aa3cf200c673a39ed60c",
+    "internal/legality_snapshot.tcl": "e3b9e2b406b1259ff284eb72bdf34b8523a9d5ee37d4dbeb4308bf1443460a8d",
+    "internal/metrics.py": "65336ca75cd35d3247104dbcde3da7ee43ad53b12210e769aa0fb80339a8fcb0",
+    "internal/refresh_timing.py": "86684c6a4b1896569489f028e5c3b85aa7356d0e97d25052b1b8a500fe17776a",
+    "internal/run.py": "332a756212f17a287bbf1b1d5eb73cc70c7c7fd89535fede61a391c74cdaf5b4",
+    "internal/__init__.py": "8fdc65d520569b9fcc49a1e57a627852048e34966f86188e08bdbc70f37ea901",
+    "eval.sh": "953c6342f1a0dac255504c0b14a348abb27e463a5a2796a4ce455f21ec521ba8",
+    "run_submission.py": "5d4e3388d86bbba16981e22f626c42d2c14a9fe0605a7b4c28493dbf19e76a3c",
+    "score.py": "ecd2765fc2b0f42378eb2a0ff23a55dd15ec38497268c57271ee18cd08f5059f"
+  }
+}

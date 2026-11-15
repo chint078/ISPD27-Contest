@@ -1,0 +1,26 @@
+[
+  {
+    "file": "/workspace/results/aes-submission-run/evaluation/parasitics_BC.spef",
+    "nets": 15610,
+    "declared_cap_ff": 12685.515682699972,
+    "exported_cap_ff": 12685.517279348973,
+    "mismatches": 0,
+    "examples": []
+  },
+  {
+    "file": "/workspace/results/aes-submission-run/evaluation/parasitics_TC.spef",
+    "nets": 15610,
+    "declared_cap_ff": 12685.515682699972,
+    "exported_cap_ff": 12685.517279348973,
+    "mismatches": 0,
+    "examples": []
+  },
+  {
+    "file": "/workspace/results/aes-submission-run/evaluation/parasitics_WC.spef",
+    "nets": 15610,
+    "declared_cap_ff": 12685.515682699972,
+    "exported_cap_ff": 12685.517279348973,
+    "mismatches": 0,
+    "examples": []
+  }
+]

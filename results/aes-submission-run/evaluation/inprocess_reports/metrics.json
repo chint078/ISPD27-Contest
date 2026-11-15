@@ -1,0 +1,282 @@
+{
+  "validation": {
+    "input_def_verilog_structurally_identical": true,
+    "submission": {
+      "r0_to_submission_equivalence": {
+        "passed": true,
+        "seconds": 4.544702449999022
+      },
+      "clock_and_sink_integrity": true,
+      "protected_instance_integrity": true,
+      "structural_legality": {
+        "passed": true,
+        "fixed_def_sections": [
+          "BUSBITCHARS",
+          "DESIGN",
+          "DIEAREA",
+          "DIVIDERCHAR",
+          "NET_ROUTING_ATTRIBUTES",
+          "NONDEFAULTRULES",
+          "PINS",
+          "ROW",
+          "SPECIALNETS",
+          "TRACKS",
+          "UNITS",
+          "VERSION",
+          "VIAS"
+        ],
+        "transformations": {
+          "removed_data_repeaters": 0,
+          "inserted_data_repeaters": 0,
+          "changed_masters": 50,
+          "pin_swapped_instances": 0,
+          "protected_instances": 1283
+        },
+        "changed_from_baseline": true
+      },
+      "input_legality_passed": true
+    },
+    "input_to_evaluated_equivalence": {
+      "passed": true,
+      "seconds": 4.540884072001063
+    },
+    "instances_before": 15990,
+    "instances_after": 15990,
+    "new_instances": 0,
+    "removed_instances": 0,
+    "resized_instances": 0,
+    "displacement_dbu": {
+      "max": 0,
+      "sum": 0
+    }
+  },
+  "scenarios": [
+    {
+      "design": "aes",
+      "resizer": "0",
+      "corner": "TC",
+      "setup_worst_slack_ps": -282.921659453831,
+      "setup_tns_ps": -44547.91753298035,
+      "setup_violating_endpoints": 262,
+      "hold_worst_slack_ps": -7.733605453623686,
+      "hold_tns_ps": -230.50265954793974,
+      "hold_violating_endpoints": 110,
+      "setup_wns_ps": -282.921659453831,
+      "hold_wns_ps": -7.733605453623686,
+      "power": {
+        "Sequential": {
+          "internal": 0.00651,
+          "switching": 0.00254,
+          "leakage": 1.26e-05,
+          "total": 0.00906
+        },
+        "Combinational": {
+          "internal": 0.0676,
+          "switching": 0.106,
+          "leakage": 2.48e-05,
+          "total": 0.174
+        },
+        "Clock": {
+          "internal": 0.00199,
+          "switching": 0.00149,
+          "leakage": 3.82e-07,
+          "total": 0.00348
+        },
+        "Macro": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Pad": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Total": {
+          "internal": 0.0761,
+          "switching": 0.11,
+          "leakage": 3.78e-05,
+          "total": 0.186
+        }
+      },
+      "erc": {
+        "max_slew": {
+          "count": 0,
+          "sum_violation": 0
+        },
+        "max_capacitance": {
+          "count": 0,
+          "sum_violation": 0
+        },
+        "max_fanout": {
+          "count": 0,
+          "sum_violation": 0
+        }
+      }
+    },
+    {
+      "design": "aes",
+      "resizer": "0",
+      "corner": "BC",
+      "setup_worst_slack_ps": -198.65087432231942,
+      "setup_tns_ps": -32353.86727023479,
+      "setup_violating_endpoints": 264,
+      "hold_worst_slack_ps": -18.56810546077942,
+      "hold_tns_ps": -1529.7305705548904,
+      "hold_violating_endpoints": 214,
+      "setup_wns_ps": -198.65087432231942,
+      "hold_wns_ps": -18.56810546077942,
+      "power": {
+        "Sequential": {
+          "internal": 0.00854,
+          "switching": 0.00324,
+          "leakage": 8.15e-06,
+          "total": 0.0118
+        },
+        "Combinational": {
+          "internal": 0.0947,
+          "switching": 0.139,
+          "leakage": 1.59e-05,
+          "total": 0.234
+        },
+        "Clock": {
+          "internal": 0.0027,
+          "switching": 0.00193,
+          "leakage": 2.44e-07,
+          "total": 0.00463
+        },
+        "Macro": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Pad": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Total": {
+          "internal": 0.106,
+          "switching": 0.144,
+          "leakage": 2.43e-05,
+          "total": 0.25
+        }
+      },
+      "erc": {
+        "max_slew": {
+          "count": 0,
+          "sum_violation": 0
+        },
+        "max_capacitance": {
+          "count": 0,
+          "sum_violation": 0
+        },
+        "max_fanout": {
+          "count": 0,
+          "sum_violation": 0
+        }
+      }
+    },
+    {
+      "design": "aes",
+      "resizer": "0",
+      "corner": "WC",
+      "setup_worst_slack_ps": -444.2939367511145,
+      "setup_tns_ps": -65493.360330256655,
+      "setup_violating_endpoints": 240,
+      "hold_worst_slack_ps": -3.855221712839946,
+      "hold_tns_ps": -68.11397306755056,
+      "hold_violating_endpoints": 47,
+      "setup_wns_ps": -444.2939367511145,
+      "hold_wns_ps": -3.855221712839946,
+      "power": {
+        "Sequential": {
+          "internal": 0.00614,
+          "switching": 0.00198,
+          "leakage": 7.62e-05,
+          "total": 0.00819
+        },
+        "Combinational": {
+          "internal": 0.0627,
+          "switching": 0.0815,
+          "leakage": 0.000158,
+          "total": 0.144
+        },
+        "Clock": {
+          "internal": 0.00165,
+          "switching": 0.00115,
+          "leakage": 2.64e-06,
+          "total": 0.0028
+        },
+        "Macro": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Pad": {
+          "internal": 0.0,
+          "switching": 0.0,
+          "leakage": 0.0,
+          "total": 0.0
+        },
+        "Total": {
+          "internal": 0.0705,
+          "switching": 0.0846,
+          "leakage": 0.000237,
+          "total": 0.155
+        }
+      },
+      "erc": {
+        "max_slew": {
+          "count": 79,
+          "sum_violation": 1565.027864457
+        },
+        "max_capacitance": {
+          "count": 0,
+          "sum_violation": 0
+        },
+        "max_fanout": {
+          "count": 0,
+          "sum_violation": 0
+        }
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "stage": "legalize",
+      "seconds": "0.0"
+    },
+    {
+      "stage": "load",
+      "seconds": "22.163"
+    },
+    {
+      "stage": "resizer",
+      "seconds": "0.0"
+    },
+    {
+      "stage": "route",
+      "seconds": "4.655"
+    },
+    {
+      "stage": "timing",
+      "seconds": "5.236"
+    },
+    {
+      "stage": "total_openroad",
+      "seconds": "36.7"
+    }
+  ],
+  "units": {
+    "time": "ps",
+    "capacitance": "fF",
+    "power": "W",
+    "displacement": "database units"
+  }
+}

@@ -1,0 +1,20 @@
+============================================================
+ISPD 2027 Optimizer
+============================================================
+Input Dir:      /workspace/benchmarks/aes
+Platform Dir:   /workspace/platform/asap7
+Output Dir:     /workspace/results/aes-submission-run/tool
+Top Module:     aes_cipher_top
+Benchmark Name: aes
+Output DEF:     /workspace/results/aes-submission-run/tool/aes.def
+Output Verilog: /workspace/results/aes-submission-run/tool/aes.v
+============================================================
+Running Python optimizer...
+Running ISPD 2027 Optimizer on aes (aes_cipher_top)
+Applied 50 zero-overlap VT swaps in Verilog.
+DEF updated with matching zero-overlap VT masters.
+Optimization finished in 0.30 seconds.
+Successfully generated:
+  /workspace/results/aes-submission-run/tool/aes.def (3579218 bytes)
+  /workspace/results/aes-submission-run/tool/aes.v (1556309 bytes)
+Optimization complete.

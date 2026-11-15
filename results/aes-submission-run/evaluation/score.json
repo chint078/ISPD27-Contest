@@ -1,0 +1,193 @@
+{
+  "score": -0.33420723518752304,
+  "higher_is_better": true,
+  "status": "provisional",
+  "components": {
+    "ppa": -0.00014290310565173126,
+    "hold_penalty": 0.462152600239223,
+    "erc_penalty": 1.5315113177439352e-08,
+    "runtime_penalty": -0.07809518099730728,
+    "displacement_penalty": -0.04999310247515759,
+    "overflow_penalty": 0.0
+  },
+  "scenarios": {
+    "BC": {
+      "mode": "functional",
+      "weight": 0.3333333333333333,
+      "hold_weight": 0.3333333333333333,
+      "weighted_terms": {
+        "hold_tns": 0.5297301518470415,
+        "hold_wns": 0.8567276488706276,
+        "setup_tns": -5.886055808702576e-05,
+        "setup_wns": 0.0,
+        "dynamic_power": 0.0,
+        "leakage_power": 0.0,
+        "slew": 0.0,
+        "cap": 0.0,
+        "fanout": 0.0
+      }
+    },
+    "TC": {
+      "mode": "functional",
+      "weight": 0.3333333333333333,
+      "hold_weight": 0.3333333333333333,
+      "weighted_terms": {
+        "hold_tns": 0.0,
+        "hold_wns": 0.0,
+        "setup_tns": -7.393405918014375e-05,
+        "setup_wns": -3.1786616923363066e-05,
+        "dynamic_power": 0.0,
+        "leakage_power": -0.00013262599469495445,
+        "slew": 0.0,
+        "cap": 0.0,
+        "fanout": 0.0
+      }
+    },
+    "WC": {
+      "mode": "functional",
+      "weight": 0.3333333333333333,
+      "hold_weight": 0.3333333333333333,
+      "weighted_terms": {
+        "hold_tns": 0.0,
+        "hold_wns": 0.0,
+        "setup_tns": -0.00010101514404873521,
+        "setup_wns": -3.048694402097157e-05,
+        "dynamic_power": 0.0,
+        "leakage_power": 0.0,
+        "slew": 4.594533953231806e-08,
+        "cap": 0.0,
+        "fanout": 0.0
+      }
+    }
+  },
+  "config": {
+    "status": "provisional",
+    "weights": {
+      "setup_tns": 1.0,
+      "setup_wns": 1.0,
+      "dynamic_power": 0.05,
+      "leakage_power": 0.05,
+      "hold_tns": 1.0,
+      "hold_wns": 1.0,
+      "slew": 0.1,
+      "cap": 0.1,
+      "fanout": 0.1,
+      "tool_runtime": 0.05,
+      "flow_runtime": 0.05,
+      "displacement": 0.05,
+      "max_overflow": 1.0,
+      "total_overflow": 1.0
+    },
+    "scenarios": {
+      "BC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.3333333333333333,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "TC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.3333333333333333,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "WC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.3333333333333333,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      }
+    },
+    "scan_scenarios": {
+      "BC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "TC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "WC": {
+        "mode": "functional",
+        "weight": 0.3333333333333333,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "BC_test": {
+        "mode": "scan test",
+        "weight": 0.0,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "TC_test": {
+        "mode": "scan test",
+        "weight": 0.0,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      },
+      "WC_test": {
+        "mode": "scan test",
+        "weight": 0.0,
+        "hold_weight": 0.16666666666666666,
+        "hold_tns_tolerance_ns": 1.0,
+        "hold_wns_tolerance_ns": 0.01
+      }
+    },
+    "epsilon": {
+      "time_ns": 1e-06,
+      "slew_ps": 0.001,
+      "cap_ff": 1e-06,
+      "fanout": 1e-06,
+      "displacement_um": 1e-06,
+      "overflow": 1e-06
+    },
+    "overflow_thresholds": {
+      "max": 0.0,
+      "total": 0.0
+    }
+  },
+  "runtimes": {
+    "tool_s": 0.47069267199913156,
+    "flow_s": 110.50098642599914,
+    "reference_tool_s": 83.357,
+    "reference_flow_s": 255.52334449253976
+  },
+  "eligibility": "design_and_runtime_checks_passed",
+  "note": "Numerical Section 3.3.1 score only; mandatory legality checks and ranking remain separate.",
+  "design": "aes",
+  "configuration": "aes_p55_h55",
+  "inputs": {
+    "baseline": {
+      "path": "/workspace/evaluator/reference_results/aes/baseline.csv",
+      "sha256": "31c708ef1a8dd56a3ba28af024835339cfb2fbe28d9e9764ee429d62ff433724"
+    },
+    "candidate": {
+      "path": "/workspace/results/aes-submission-run/evaluation/summary.csv",
+      "sha256": "e11470cd690958f22d2dc859be982d528e281d0131a4f3a37a1192e5ab9483ff"
+    },
+    "reference": {
+      "path": "/workspace/evaluator/reference_results/aes/resizer.csv",
+      "sha256": "ee0f7bfbf0ddb4dd96dcbd13c4c0ec68584dea05e02d99e6db786dae9750e2e2"
+    },
+    "config": {
+      "path": "/workspace/evaluator/config/scoring_config.json",
+      "sha256": "f9b52fe0fd0bde7da9dcbb4570f041339dd09266c000e60c5d94bfcbe9f62ce0"
+    },
+    "runtimes": {
+      "path": "/workspace/results/aes-submission-run/evaluation/runtimes.json",
+      "sha256": "7fa2d21c2f8065ccb9d7c8f466ff3345284d6f621434fbfb850dd198155b975e"
+    }
+  }
+}

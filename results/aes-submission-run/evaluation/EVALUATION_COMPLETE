@@ -1,0 +1,2 @@
+Design legality, timing, routing and metric extraction passed; see legality.json.
+Use run_submission.py for measured tool-runtime validation. Scoring is a separate step.

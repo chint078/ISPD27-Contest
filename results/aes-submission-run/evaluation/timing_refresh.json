@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "input_sha256": {
+    "evaluated.def": "848dc773baeebaf006434c510e4b4b3d008d14dcb4c94c9c83f874452a7765c0",
+    "evaluated.v": "715f530569c9fc7b0505dc9a2572bfbafb9113ec42156b6faa0f2661ed184efb",
+    "parasitics_TC.spef": "9c5ebaec0e75f0780318204c89ca5f4b3acd2327489ec7df221088cfa2d4083e",
+    "parasitics_BC.spef": "9c5ebaec0e75f0780318204c89ca5f4b3acd2327489ec7df221088cfa2d4083e",
+    "parasitics_WC.spef": "9c5ebaec0e75f0780318204c89ca5f4b3acd2327489ec7df221088cfa2d4083e"
+  },
+  "refresh_script_sha256": "86684c6a4b1896569489f028e5c3b85aa7356d0e97d25052b1b8a500fe17776a",
+  "optimization_config_sha256": "cc5774e98f3105daacde137a04563082da382729be466fd3c8681e44954302c2",
+  "final_timing_config_sha256": "c57641110a706edee7538e860ceb07da20d503b54cc3ca70404e43edddec1b60",
+  "inprocess_runtime_s": 36.7,
+  "final_timing_runtime_s": 21.848,
+  "total_openroad_runtime_s": 58.548
+}

@@ -1,0 +1,7 @@
+[INFO ORD-0030] Using 8 thread(s).
+[INFO ODB-0227] LEF file: /workspace/platform/asap7/lef/asap7_tech_1x_201209.lef, created 30 layers, 9 vias
+[INFO ODB-0227] LEF file: /workspace/platform/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_L_1x_220121a already seen in asap7sc7p5t_28_R_1x_220121a
+[INFO ODB-0227] LEF file: /workspace/platform/asap7/lef/asap7sc7p5t_28_L_1x_220121a.lef, created 212 library cells
+[INFO ODB-0394] Duplicate site asap7sc7p5t in asap7sc7p5t_28_SL_1x_220121a already seen in asap7sc7p5t_28_R_1x_220121a
+[INFO ODB-0227] LEF file: /workspace/platform/asap7/lef/asap7sc7p5t_28_SL_1x_220121a.lef, created 212 library cells

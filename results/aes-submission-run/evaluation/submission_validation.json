@@ -1,0 +1,35 @@
+{
+  "r0_to_submission_equivalence": {
+    "passed": true,
+    "seconds": 4.544702449999022
+  },
+  "clock_and_sink_integrity": true,
+  "protected_instance_integrity": true,
+  "structural_legality": {
+    "passed": true,
+    "fixed_def_sections": [
+      "BUSBITCHARS",
+      "DESIGN",
+      "DIEAREA",
+      "DIVIDERCHAR",
+      "NET_ROUTING_ATTRIBUTES",
+      "NONDEFAULTRULES",
+      "PINS",
+      "ROW",
+      "SPECIALNETS",
+      "TRACKS",
+      "UNITS",
+      "VERSION",
+      "VIAS"
+    ],
+    "transformations": {
+      "removed_data_repeaters": 0,
+      "inserted_data_repeaters": 0,
+      "changed_masters": 50,
+      "pin_swapped_instances": 0,
+      "protected_instances": 1283
+    },
+    "changed_from_baseline": true
+  },
+  "input_legality_passed": true
+}

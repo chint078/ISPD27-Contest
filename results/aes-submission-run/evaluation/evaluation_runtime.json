@@ -1,0 +1,5 @@
+{
+  "evaluation_wall_seconds": 109.65942064800038,
+  "includes": "input checks, formal proofs, OpenROAD, SPEF checks, metric extraction",
+  "contestant_tool_runtime_seconds": null
+}
