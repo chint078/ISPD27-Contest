@@ -1,0 +1,9 @@
+date,commit,benchmark,mode,setup_tns_bc,setup_tns_tc,setup_tns_wc,setup_wns_bc,setup_wns_tc,setup_wns_wc,hold_violations,erc_violations,tool_runtime_s,score,legality_passed,notes
+2026-11-08,baseline,aes,baseline,-32.35,-44.54,-65.49,-0.199,-0.283,-0.444,195,79,90.59,0.0,true,Contest baseline reference
+2026-11-08,resizer,aes,resizer,-24.56,-30.72,-42.26,-0.158,-0.191,-0.261,7,0,172.17,0.0,true,OpenROAD Resizer reference
+2026-11-08,baseline,jpeg,baseline,-192.27,-268.38,-442.68,-0.345,-0.484,-0.746,1033,46,221.86,0.0,true,Contest baseline reference
+2026-11-08,resizer,jpeg,resizer,-128.55,-172.41,-289.19,-0.210,-0.274,-0.445,16,0,367.15,0.0,true,OpenROAD Resizer reference
+2026-11-08,baseline,coralnpu,baseline,-11160.6,-12628.6,-15133.1,-1.244,-1.691,-2.563,78553,30815,10196.28,0.0,true,Contest baseline reference
+2026-11-08,resizer,coralnpu,resizer,-9574.0,-10498.8,-12190.2,-0.825,-0.917,-1.131,1316,15099,22431.21,0.0,true,OpenROAD Resizer reference
+2026-11-08,baseline,nyuzi,baseline,-1799.2,-2596.3,-4228.4,-0.546,-0.819,-1.291,29732,17066,1888.40,0.0,true,Contest baseline reference
+2026-11-08,resizer,nyuzi,resizer,-1497.7,-1942.5,-2993.1,-0.389,-0.518,-0.747,7208,7497,3477.83,0.0,true,OpenROAD Resizer reference
